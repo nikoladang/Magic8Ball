@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Which Dish?</title>
+    <title>Magic 8 Ball</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -23,21 +23,26 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
-  <body ng-app="magic8ball">
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title center-text">Which Dish?</h1>
+        <h1 class="title">Magic 8 Ball</h1>
       </ion-header-bar>
-      <ion-content class="ball-center-content"
-                   scroll="false"
-                    ng-controller="PredictionController">
-        <!--<img src="img/8ball.png" alt="" class="logo"-->
-                <!--ng-click="ask()">-->
-        <ion-spinner icon="ripple" class="spinner-energized"
-                ng-click="ask()"></ion-spinner>
-        <p class="prediction"
-                ng-class="{'show': showed}">{{ prediction }}</p>
-        <img ng-show="{'img_showed': showed}" ng-src="img/dish/{{ prediction }}.png" width="300">
+      <ion-content>
+
       </ion-content>
     </ion-pane>
   </body>
