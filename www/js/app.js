@@ -29,22 +29,28 @@ app.controller('PredictionController', function ($scope, $timeout) {
     "Gourd Soup",
     "Fried Fish",
     "Fried Water Morning Glory",
+    "Chinese Sausage",
+    "Sweet And Sour Fish Soup",
+    "Scad Fish Cooked With Sauce",
+    "Tofu And Meat Cooked With Sauce",
+    "Chinese Braised Pork",
+    "Rice Noodle Soup With Beef",
     "Instant Noodle"
   ];
 
   $scope.prediction = "Tap For Dish";
   $scope.showed = true;
-  $scope.img_showed = false;
+  $scope.showImage = false;
 
   $scope.ask = function(){
     $scope.prediction = "Checking...";
     $scope.showed = false;
-    $scope.img_showed = false;
+    $scope.showImage = false;
     $timeout(function(){
       $scope.prediction = predictionList[Math.floor(Math.random() * predictionList.length)];
       $scope.showed = true;
-      $scope.img_showed = true;
-    }, 2000);
-  }
+      $scope.showImage = true;
+    }, 1000);
+  };
 
 });

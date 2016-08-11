@@ -37,7 +37,7 @@
                 ng-click="ask()"></ion-spinner>
         <p class="prediction"
                 ng-class="{'show': showed}">{{ prediction }}</p>
-        <img ng-show="{'img_showed': showed}" ng-src="img/dish/{{ prediction }}.png" width="300">
+        <img ng-if="showImage" ng-src="img/dish/{{ prediction }}.png" width="300">
       </ion-content>
     </ion-pane>
   </body>
